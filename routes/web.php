@@ -1,0 +1,31 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('home');
+});
+
+Route::get('/dana', function () {
+    return view('layout.dana');
+});
+
+Route::get('/GalangDana', function () {
+    return view('layout.GalangDana');
+});
+
+Route::get('/zakat', function () {
+    return view('layout.zakat');
+});
+
+Route::get('/account', function () {
+    return view('layout.account');
+});
+
+// Route::get('/login', function () {
+//     return view('auth.login');
+// })->name('login');
+
+Route::get('/dashboard', function () {
+    return view('layout.dashboard');
+});
