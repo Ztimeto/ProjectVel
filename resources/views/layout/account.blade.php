@@ -32,12 +32,6 @@
                 <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg w-full">Login account</button>
                 </a>
             </div>
-
-            <div class="mt-8">
-                <a href="{{url('/dashboard')}}" target="_blank" rel="noopener noreferrer">
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg w-full">Admin dashboard</button>
-                </a>
-            </div>
         </div>
     </div>
 </body>
