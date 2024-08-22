@@ -56,7 +56,27 @@
                             </a>
                         </div>
                     </div>
-                    <hr class="m-0 h-2 w-full border-0 bg-[#fcd0b7] p-0">
+                    <div class="relative w-full max-w-4xl overflow-hidden mb-6 mx-auto">
+                        <div class="flex transition-transform duration-500 ease-in-out" id="carousel-inner">
+                            <div class="flex-shrink-0 w-full h-64 bg-red-500 flex items-center justify-center text-white text-2xl">Slide 1</div>
+                            <div class="flex-shrink-0 w-full h-64 bg-blue-500 flex items-center justify-center text-white text-2xl">Slide 2</div>
+                            <div class="flex-shrink-0 w-full h-64 bg-green-500 flex items-center justify-center text-white text-2xl">Slide 3</div>
+                        </div>
+                    </div>
+                    <script>
+                        const carouselInner = document.getElementById('carousel-inner');
+                        const items = document.querySelectorAll('.flex-shrink-0');
+                        const totalItems = items.length;
+                        let index = 0;
+
+                        function nextSlide() {
+                            index = (index + 1) % totalItems;
+                            carouselInner.style.transform = `translateX(-${index * 100}%)`;
+                        }
+
+                        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+                    </script>
+                    <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="py-4">
                         <h2 class="px-4 text-base font-semibold text-center pb-4">Activity</h2>
                         <div class="relative w-full max-w-2xl bg-slate-200">
@@ -64,10 +84,10 @@
                             <img id="arrow-right" class="none absolute top-[40%] right-0 transform -translate-y-1/2 z-1 cursor-pointer" aria-hidden="true" src="https://cdn-icons-png.flaticon.com/128/3114/3114931.png" width="25" height="25" alt="arrow right" decoding="auto" fetchpriority="auto">
                             <div class="slider overflow-x-auto scroll-smooth pb-4 py-4 flex space-x-4 px-4 scroll-pl-15">
                                 <div class="flex-shrink-0 w-56 h-56 bg-white rounded-lg shadow-sm flex items-center justify-center hover:shadow-md "><img src="{{url('images/Activity/Activity_1.jpeg')}}" alt="Activity"></div>
-                                <div class="flex-shrink-0 w-56 h-56 bg-white rounded-lg shadow-sm flex items-center justify-center hover:shadow-md "><img src="{{url('')}}" alt="Activity"></div>
-                                <div class="flex-shrink-0 w-56 h-56 bg-white rounded-lg shadow-sm flex items-center justify-center hover:shadow-md "><img src="{{url('')}}" alt="Activity"></div>
-                                <div class="flex-shrink-0 w-56 h-56 bg-white rounded-lg shadow-sm flex items-center justify-center hover:shadow-md "><img src="{{url('')}}" alt="Activity"></div>
-                                <div class="flex-shrink-0 w-56 h-56 bg-white rounded-lg shadow-sm flex items-center justify-center hover:shadow-md "><img src="{{url('')}}" alt="Activity"></div>
+                                <div class="flex-shrink-0 w-56 h-56 bg-white rounded-lg shadow-sm flex items-center justify-center hover:shadow-md "><img src="{{url('images/food/charity_food_3.jpeg')}}" alt="Activity"></div>
+                                <div class="flex-shrink-0 w-56 h-56 bg-white rounded-lg shadow-sm flex items-center justify-center hover:shadow-md "><img src="{{url('images/Pendidikan/Pendidikan_1.jpeg')}}" alt="Activity"></div>
+                                <div class="flex-shrink-0 w-56 h-56 bg-white rounded-lg shadow-sm flex items-center justify-center hover:shadow-md "><img src="{{url('images/Disaster/Disaster_1.jpeg')}}" alt="Activity"></div>
+                                <div class="flex-shrink-0 w-56 h-56 bg-white rounded-lg shadow-sm flex items-center justify-center hover:shadow-md "><img src="{{url('images/Disaster/Disaster_3.jpeg')}}" alt="Activity"></div>
                             </div>
                         </div>
                         <script>
@@ -90,7 +110,7 @@
                             });
                         </script>
                     </div>
-                    <hr class="m-0 h-2 w-full border-0 bg-[#fcd0b7] p-0">
+                    <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="p-4">
                         <h2 class="px-4 text-base font-semibold text-center">category</h2>
                         <div class="grid grid-cols-4 gap-y-6">
@@ -185,7 +205,7 @@
                             updateSlider('food');
                         });
                     </script>
-                    <hr class="m-0 h-2 w-full border-0 bg-[#fcd0b7] p-0">
+                    <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="px-4 pt-6">
                         <div class="mb-8 text-center text-sm text-onyx">
                         <a href="" class="text-onyx">Kebijakan Privasi</a>

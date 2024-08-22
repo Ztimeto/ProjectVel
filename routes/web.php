@@ -29,3 +29,15 @@ Route::get('/account', function () {
 Route::get('/dashboard', function () {
     return view('layout.dashboard');
 });
+
+Route::get('/CampaignList', function () {
+    return view('layout.CampaignList');
+});
+
+Route::get('/akun', function () {
+    return view('layout.akun');
+});
+
+Route::get('/payment', function () {
+    return view('layout.payment');
+});
