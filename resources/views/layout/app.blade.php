@@ -79,7 +79,7 @@
                     <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="py-4">
                         <h2 class="px-4 text-base font-semibold text-center pb-4">Activity</h2>
-                        <div class="relative w-full max-w-2xl bg-slate-200">
+                        <div class="relative w-full max-w-2xl bg-gray-300">
                             <img id="arrow-left" class="none absolute top-[40%] left-0 transform -translate-y-1/2 z-1 cursor-pointer" aria-hidden="true" src="https://cdn-icons-png.flaticon.com/128/3114/3114883.png" width="25" height="25" alt="arrow left" decoding="auto" fetchpriority="auto">
                             <img id="arrow-right" class="none absolute top-[40%] right-0 transform -translate-y-1/2 z-1 cursor-pointer" aria-hidden="true" src="https://cdn-icons-png.flaticon.com/128/3114/3114931.png" width="25" height="25" alt="arrow right" decoding="auto" fetchpriority="auto">
                             <div class="slider overflow-x-auto scroll-smooth pb-4 py-4 flex space-x-4 px-4 scroll-pl-15">
@@ -141,7 +141,7 @@
                         </div>
                         <br>
                         <br>
-                        <div class="relative w-full max-w-2xl bg-slate-200">
+                        <div class="relative w-full max-w-2xl bg-gray-300">
                             <div id="slider" class="overflow-y-auto scroll-smooth grid grid-cols-1 gap-y-9 h-[350px] overscroll-y-auto pt-6">
                             </div>
                         </div>
@@ -205,6 +205,51 @@
                             updateSlider('food');
                         });
                     </script>
+                    <hr class="m-0 h-2 w-full border-0 bg-slate-200">
+                    <!-- Tempat news -->
+                    <div class="max-w-4xl mx-auto">
+                        <div class="flex justify-center items-center mb-6">
+                            <h1 class="text-xl font-semibold">News</h1>
+                        </div>
+                        <div class="flex space-x-4 overflow-x-auto scrollbar-hide px-4 bg-gray-300">
+                            <!-- Card 1 -->
+                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                <p class="text-sm font-semibold mb-3">Solidaritas untuk Korban Banjir di Jakarta</p>
+                                <p class="text-sm text-gray-700 mb-4">Ribuan warga terdampak banjir besar yang melanda Jakarta. Bantuan terus berdatangan dari berbagai pihak.</p>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                <p class="text-sm font-semibold mb-3">Peningkatan Anggaran Pendidikan di 2024</p>
+                                <p class="text-sm text-gray-700 mb-4">Pemerintah mengumumkan peningkatan anggaran pendidikan sebesar 10% untuk tahun 2024.</p>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                <p class="text-sm font-semibold mb-3">Peluncuran Vaksin Baru untuk Flu Musiman</p>
+                                <p class="text-sm text-gray-700 mb-4">Vaksin baru untuk melawan flu musiman diluncurkan dengan harapan dapat mengurangi kasus infeksi.</p>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                <p class="text-sm font-semibold mb-3">Inovasi Teknologi Hijau untuk Mengurangi Polusi</p>
+                                <p class="text-sm text-gray-700 mb-4">Teknologi baru dikembangkan untuk mengurangi polusi udara dan meningkatkan kualitas lingkungan.</p>
+                            </div>
+
+                            <!-- Card 5 -->
+                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                <p class="text-sm font-semibold mb-3">Penerapan Kebijakan Baru untuk Transportasi Umum</p>
+                                <p class="text-sm text-gray-700 mb-4">Kebijakan baru diluncurkan untuk meningkatkan efisiensi dan kenyamanan transportasi umum di kota-kota besar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
                     <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="px-4 pt-6">
                         <div class="mb-8 text-center text-sm text-onyx">
