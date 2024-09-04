@@ -56,11 +56,11 @@
                             </a>
                         </div>
                     </div>
-                    <div class="relative w-full max-w-4xl overflow-hidden mb-6 mx-auto">
+                    <div class="relative w-full max-w-4xl overflow-hidden mb-10 my-10 mx-auto">
                         <div class="flex transition-transform duration-500 ease-in-out" id="carousel-inner">
-                            <div class="flex-shrink-0 w-full h-64 bg-red-500 flex items-center justify-center text-white text-2xl">Slide 1</div>
-                            <div class="flex-shrink-0 w-full h-64 bg-blue-500 flex items-center justify-center text-white text-2xl">Slide 2</div>
-                            <div class="flex-shrink-0 w-full h-64 bg-green-500 flex items-center justify-center text-white text-2xl">Slide 3</div>
+                            <div class="flex-shrink-0 w-full h-64 bg-red-500 flex items-center justify-center text-white text-2xl"><img src="https://ethics.org.au/wp-content/uploads/2018/05/Ethics-Centre_Your-donation-is-only-as-good-as-the-charity-you-give-it-to.jpg" alt=""></div>
+                            <div class="flex-shrink-0 w-full h-64 bg-blue-500 flex items-center justify-center text-white text-2xl"><img src="{{url('images/auto_photo_1.jpeg')}}" alt=""></div>
+                            <div class="flex-shrink-0 w-full h-64 bg-green-500 flex items-center justify-center text-white text-2xl"><img src="{{url('images/auto_photo_2.jpeg')}}" alt=""></div>
                         </div>
                     </div>
                     <script>
@@ -206,49 +206,78 @@
                         });
                     </script>
                     <hr class="m-0 h-2 w-full border-0 bg-slate-200">
-                    <!-- Tempat news -->
+                    <!-- news -->
                     <div class="max-w-4xl mx-auto">
-                        <div class="flex justify-center items-center mb-6">
-                            <h1 class="text-xl font-semibold">News</h1>
+                        <div class="flex justify-center items-center mb-6 my-6">
+                            <h1 class="text-xl font-semibold">Humanitarian News</h1>
                         </div>
                         <div class="flex space-x-4 overflow-x-auto scrollbar-hide px-4 bg-gray-300">
                             <!-- Card 1 -->
-                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                <p class="text-sm font-semibold mb-3">Solidaritas untuk Korban Banjir di Jakarta</p>
-                                <p class="text-sm text-gray-700 mb-4">Ribuan warga terdampak banjir besar yang melanda Jakarta. Bantuan terus berdatangan dari berbagai pihak.</p>
-                            </div>
+                            <a href="{{ url('/full_news/1') }}">
+                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                    <div class="overflow-hidden rounded-md">
+                                        <img src="/path-to-image1.jpg" alt="Image 1" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
+                                    </div>
+                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Solidaritas untuk Korban Bencana Alam di Lombok</p>
+                                    <p class="text-sm text-gray-700 mb-4">
+                                        Gempa bumi melanda Lombok, menghancurkan ribuan rumah dan infrastruktur. Ribuan warga kehilangan tempat tinggal dan kini hidup di tenda pengungsian dengan fasilitas terbatas...
+                                    </p>
+                                </div>
+                            </a>
 
                             <!-- Card 2 -->
-                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                <p class="text-sm font-semibold mb-3">Peningkatan Anggaran Pendidikan di 2024</p>
-                                <p class="text-sm text-gray-700 mb-4">Pemerintah mengumumkan peningkatan anggaran pendidikan sebesar 10% untuk tahun 2024.</p>
-                            </div>
+                            <a href="{{ url('/full_news/2') }}">
+                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                    <div class="overflow-hidden rounded-md">
+                                        <img src="/path-to-image2.jpg" alt="Image 2" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
+                                    </div>
+                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Krisis Kemanusiaan di Rohingya: Upaya Bantuan Internasional</p>
+                                    <p class="text-sm text-gray-700 mb-4">
+                                        Ribuan orang Rohingya terpaksa mengungsi ke negara tetangga untuk menghindari kekerasan. Mereka hidup dalam kondisi memprihatinkan di kamp-kamp pengungsian yang padat dan minim fasilitas...
+                                    </p>
+                                </div>
+                            </a>
 
                             <!-- Card 3 -->
-                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                <p class="text-sm font-semibold mb-3">Peluncuran Vaksin Baru untuk Flu Musiman</p>
-                                <p class="text-sm text-gray-700 mb-4">Vaksin baru untuk melawan flu musiman diluncurkan dengan harapan dapat mengurangi kasus infeksi.</p>
-                            </div>
+                            <a href="{{ url('/full_news/3') }}">
+                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                    <div class="overflow-hidden rounded-md">
+                                        <img src="/path-to-image3.jpg" alt="Image 3" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
+                                    </div>
+                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Kelaparan di Afrika: Krisis Pangan dan Upaya Penanganan</p>
+                                    <p class="text-sm text-gray-700 mb-4">
+                                        Banyak negara di Afrika Sub-Sahara menghadapi krisis pangan serius. Jutaan orang terancam kelaparan akibat konflik, perubahan iklim, dan pandemi COVID-19...
+                                    </p>
+                                </div>
+                            </a>
 
                             <!-- Card 4 -->
-                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                <p class="text-sm font-semibold mb-3">Inovasi Teknologi Hijau untuk Mengurangi Polusi</p>
-                                <p class="text-sm text-gray-700 mb-4">Teknologi baru dikembangkan untuk mengurangi polusi udara dan meningkatkan kualitas lingkungan.</p>
-                            </div>
+                            <a href="{{ url('/full_news/4') }}">
+                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                    <div class="overflow-hidden rounded-md">
+                                        <img src="/path-to-image4.jpg" alt="Image 4" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
+                                    </div>
+                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Pengungsian Massal di Suriah: Perjuangan untuk Bertahan Hidup</p>
+                                    <p class="text-sm text-gray-700 mb-4">
+                                        Konflik di Suriah telah menyebabkan krisis pengungsian terbesar, dengan jutaan warga terpaksa meninggalkan rumah mereka dan mengungsi ke negara-negara tetangga...
+                                    </p>
+                                </div>
+                            </a>
 
                             <!-- Card 5 -->
-                            <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                <p class="text-sm font-semibold mb-3">Penerapan Kebijakan Baru untuk Transportasi Umum</p>
-                                <p class="text-sm text-gray-700 mb-4">Kebijakan baru diluncurkan untuk meningkatkan efisiensi dan kenyamanan transportasi umum di kota-kota besar.</p>
-                            </div>
+                            <a href="{{ url('/full_news/5') }}">
+                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
+                                    <div class="overflow-hidden rounded-md">
+                                        <img src="/path-to-image5.jpg" alt="Image 5" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
+                                    </div>
+                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Perjuangan Masyarakat Adat Amazon Melawan Eksploitasi</p>
+                                    <p class="text-sm text-gray-700 mb-4">
+                                        Masyarakat adat di Amazon menghadapi ancaman dari deforestasi dan eksploitasi sumber daya alam. Mereka berjuang melawan perusakan hutan yang mengancam kehidupan mereka...
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
-
-
-
-
-
-
 
                     <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="px-4 pt-6">

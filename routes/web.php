@@ -41,3 +41,7 @@ Route::get('/akun', function () {
 Route::get('/payment', function () {
     return view('layout.payment');
 });
+
+Route::get('/full_news/{id}', function ($id) {
+    return view('layout.full_news', ['id' => $id]);
+});
