@@ -45,3 +45,7 @@ Route::get('/payment', function () {
 Route::get('/full_news/{id}', function ($id) {
     return view('layout.full_news', ['id' => $id]);
 });
+
+Route::get('/settings', function () {
+    return view('layout.settings');
+});

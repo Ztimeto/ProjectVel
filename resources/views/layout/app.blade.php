@@ -209,7 +209,7 @@
                     <!-- news -->
                     <div class="max-w-4xl mx-auto">
                         <div class="flex justify-center items-center mb-6 my-6">
-                            <h1 class="text-xl font-semibold">Humanitarian News</h1>
+                            <h1 class="text-xl font-semibold">News</h1>
                         </div>
                         <div class="flex space-x-4 overflow-x-auto scrollbar-hide px-4 bg-gray-300">
                             <!-- Card 1 -->
@@ -321,7 +321,7 @@
                         </div>
                         <span class="inline-block whitespace-nowrap text-black" >donations</span>
                     </a>
-                    <a href="{{url('/account')}}" class="inline-block w-1/5 text-[10px]" id="navbar_account" data-testid="homepage-navbar-account">
+                    <a href="{{url('/settings')}}" class="inline-block w-1/5 text-[10px]" id="navbar_account" data-testid="homepage-navbar-account">
                         <div class="relative mb-1 pt-1">
                             <img alt="account" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://cdn.icon-icons.com/icons2/3553/PNG/512/account_profile_user_ecommerce_icon_224942.png" style="color: transparent;">
                         </div>
