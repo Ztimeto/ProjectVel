@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <img src="/assets/logo_LAZ.png" alt="">
         <title>Referensi: Kitabisa.com</title>
         @vite('resources/css/app.css')
     </head>
+    <style>
+        /* Hide scrollbar for Webkit browsers */
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for Firefox */
+        .slider {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Optional: Hide scrollbar for all browsers */
+        .scrollbar-hide {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+    </style>
     <body class="bg-slate-200">
         <div id="layout">
             <main class="my-0 mx-auto min-h-full max-w-screen-sm">
@@ -206,78 +224,74 @@
                         });
                     </script>
                     <hr class="m-0 h-2 w-full border-0 bg-slate-200">
-                    <!-- news -->
+                    <!-- News Section -->
                     <div class="max-w-4xl mx-auto">
                         <div class="flex justify-center items-center mb-6 my-6">
                             <h1 class="text-xl font-semibold">News</h1>
                         </div>
-                        <div class="flex space-x-4 overflow-x-auto scrollbar-hide px-4 bg-gray-300">
-                            <!-- Card 1 -->
-                            <a href="{{ url('/full_news/1') }}">
-                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                    <div class="overflow-hidden rounded-md">
-                                        <img src="/path-to-image1.jpg" alt="Image 1" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
-                                    </div>
-                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Solidaritas untuk Korban Bencana Alam di Lombok</p>
-                                    <p class="text-sm text-gray-700 mb-4">
-                                        Gempa bumi melanda Lombok, menghancurkan ribuan rumah dan infrastruktur. Ribuan warga kehilangan tempat tinggal dan kini hidup di tenda pengungsian dengan fasilitas terbatas...
-                                    </p>
-                                </div>
-                            </a>
-
-                            <!-- Card 2 -->
-                            <a href="{{ url('/full_news/2') }}">
-                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                    <div class="overflow-hidden rounded-md">
-                                        <img src="/path-to-image2.jpg" alt="Image 2" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
-                                    </div>
-                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Krisis Kemanusiaan di Rohingya: Upaya Bantuan Internasional</p>
-                                    <p class="text-sm text-gray-700 mb-4">
-                                        Ribuan orang Rohingya terpaksa mengungsi ke negara tetangga untuk menghindari kekerasan. Mereka hidup dalam kondisi memprihatinkan di kamp-kamp pengungsian yang padat dan minim fasilitas...
-                                    </p>
-                                </div>
-                            </a>
-
-                            <!-- Card 3 -->
-                            <a href="{{ url('/full_news/3') }}">
-                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                    <div class="overflow-hidden rounded-md">
-                                        <img src="/path-to-image3.jpg" alt="Image 3" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
-                                    </div>
-                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Kelaparan di Afrika: Krisis Pangan dan Upaya Penanganan</p>
-                                    <p class="text-sm text-gray-700 mb-4">
-                                        Banyak negara di Afrika Sub-Sahara menghadapi krisis pangan serius. Jutaan orang terancam kelaparan akibat konflik, perubahan iklim, dan pandemi COVID-19...
-                                    </p>
-                                </div>
-                            </a>
-
-                            <!-- Card 4 -->
-                            <a href="{{ url('/full_news/4') }}">
-                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                    <div class="overflow-hidden rounded-md">
-                                        <img src="/path-to-image4.jpg" alt="Image 4" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
-                                    </div>
-                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Pengungsian Massal di Suriah: Perjuangan untuk Bertahan Hidup</p>
-                                    <p class="text-sm text-gray-700 mb-4">
-                                        Konflik di Suriah telah menyebabkan krisis pengungsian terbesar, dengan jutaan warga terpaksa meninggalkan rumah mereka dan mengungsi ke negara-negara tetangga...
-                                    </p>
-                                </div>
-                            </a>
-
-                            <!-- Card 5 -->
-                            <a href="{{ url('/full_news/5') }}">
-                                <div class="bg-white p-4 rounded-lg shadow-md w-72 flex-shrink-0 transform transition-transform duration-300 hover:scale-105 my-4">
-                                    <div class="overflow-hidden rounded-md">
-                                        <img src="/path-to-image5.jpg" alt="Image 5" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
-                                    </div>
-                                    <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">Perjuangan Masyarakat Adat Amazon Melawan Eksploitasi</p>
-                                    <p class="text-sm text-gray-700 mb-4">
-                                        Masyarakat adat di Amazon menghadapi ancaman dari deforestasi dan eksploitasi sumber daya alam. Mereka berjuang melawan perusakan hutan yang mengancam kehidupan mereka...
-                                    </p>
-                                </div>
+                        <div class="relative">
+                            <!-- Slider Container -->
+                            <div class="slider-wrapper overflow-x-auto flex space-x-4 py-4 px-2 scrollbar-hidden bg-gray-300" id="news-slider">
+                                @forelse ($newsArticles as $article)
+                                    <a href="{{ route('full_news.show', $article->id) }}" class="flex-shrink-0">
+                                        <div class="bg-white p-4 rounded-lg shadow-md w-72 transform transition-transform duration-300 hover:scale-105 my-4">
+                                            <div class="overflow-hidden rounded-md">
+                                                @if($article->image_url)
+                                                    <img src="{{ asset('storage/' . $article->image_url) }}" alt="{{ $article->title }}" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
+                                                @else
+                                                    <img src="{{ asset('images/default-image.jpg') }}" alt="Default Image" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
+                                                @endif
+                                            </div>
+                                            <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">{{ $article->title }}</p>
+                                            <p class="text-sm text-gray-700 mb-4">
+                                                {{ Str::limit($article->content, 100) }}
+                                            </p>
+                                        </div>
+                                    </a>
+                                @empty
+                                    <p class="text-center text-gray-500">No news available.</p>
+                                @endforelse
+                            </div>
+                        </div>
+                        <div class="flex my-10 mb-10 justify-center items-center">
+                            <a href="{{ route('create_news') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Buat news
                             </a>
                         </div>
                     </div>
+
+                    <!-- Articles Section -->
+                    <div class="max-w-4xl mx-auto">
+                        <div class="flex justify-center items-center mb-6 my-6">
+                            <h1 class="text-xl font-semibold">Article</h1>
+                        </div>
+                        <div class="relative">
+                            <!-- Slider Container -->
+                            <div class="slider-wrapper overflow-x-auto flex space-x-4 py-4 px-2 scrollbar-hidden bg-gray-300" id="articles-slider">
+                                @forelse ($articles as $article)
+                                    <a href="{{ route('full_news.show', $article->id) }}" class="flex-shrink-0">
+                                        <div class="bg-white p-4 rounded-lg shadow-md w-72 transform transition-transform duration-300 hover:scale-105 my-4">
+                                            <div class="overflow-hidden rounded-md">
+                                                @if($article->image_url)
+                                                    <img src="{{ asset('storage/' . $article->image_url) }}" alt="{{ $article->title }}" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
+                                                @else
+                                                    <img src="{{ asset('images/default-image.jpg') }}" alt="Default Image" class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110">
+                                                @endif
+                                            </div>
+                                            <p class="text-sm font-semibold mb-3 transition-colors duration-300 hover:text-green-600">{{ $article->title }}</p>
+                                            <p class="text-sm text-gray-700 mb-4">
+                                                {{ Str::limit($article->content, 100) }}
+                                            </p>
+                                        </div>
+                                    </a>
+                                @empty
+                                    <p class="text-center text-gray-500">No articles available.</p>
+                                @endforelse
+                            </div>
+                        </div>
+                    </div>
+
+
 
                     <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="px-4 pt-6">

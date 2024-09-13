@@ -19,7 +19,7 @@
                 <div class="w-1/4 bg-blue-100 p-5 rounded-l-lg">
                     <div class="text-center mb-6">
                         <img src="https://via.placeholder.com/100" alt="Profile Image" class="rounded-full mx-auto mb-2">
-                        <h3 class="text-xl font-semibold">Vũ Doãn Dũng</h3>
+                        <h3 class="text-xl font-semibold">Vu</h3>
                     </div>
                     <ul class="space-y-4">
                         <li><a href="#" id="link-account" onclick="showSection('account', 'link-account')" class="sidebar-link text-blue-600 font-medium transition-colors duration-300">Account</a></li>
@@ -39,25 +39,25 @@
                                 <!-- First Name -->
                                 <div>
                                     <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
-                                    <input type="text" id="first-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" value="Vũ Doãn">
+                                    <input type="text" id="first-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                                 </div>
                                 <!-- Last Name -->
                                 <div>
                                     <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
-                                    <input type="text" id="last-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" value="Dũng">
+                                    <input type="text" id="last-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" ">
                                 </div>
                             </div>
 
                             <!-- Email -->
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                                <input type="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" value="vudoangit92@gmail.com">
+                                <input type="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
                             </div>
 
                             <!-- Phone Number -->
                             <div>
                                 <label for="phone" class="block text-sm font-medium text-gray-700">Phone number</label>
-                                <input type="text" id="phone" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" value="+91 9876543215">
+                                <input type="text" id="phone" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" >
                             </div>
 
                             <!-- Buttons -->

@@ -1,10 +1,9 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [ArticleController::class, 'home'])->name('home');
 
 Route::get('/dana', function () {
     return view('layout.dana');
@@ -22,9 +21,6 @@ Route::get('/account', function () {
     return view('layout.account');
 });
 
-// Route::get('/login', function () {
-//     return view('auth.login');
-// })->name('login');
 
 Route::get('/dashboard', function () {
     return view('layout.dashboard');
@@ -42,10 +38,11 @@ Route::get('/payment', function () {
     return view('layout.payment');
 });
 
-Route::get('/full_news/{id}', function ($id) {
-    return view('layout.full_news', ['id' => $id]);
-});
+Route::get('/full_news/{id}', [ArticleController::class, 'show'])->name('full_news.show');
+Route::post('/news', [ArticleController::class, 'store'])->name('news.store');
 
 Route::get('/settings', function () {
     return view('layout.settings');
 });
+
+Route::get('/create_news', [ArticleController::class, 'create'])->name('create_news');
