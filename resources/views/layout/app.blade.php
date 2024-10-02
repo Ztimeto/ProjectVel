@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <img src="/assets/logo_LAZ.png" alt="">
-        <title>Referensi: Kitabisa.com</title>
+        <title>Graha Dhuafa Indonesia</title>
         @vite('resources/css/app.css')
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     </head>
     <style>
         /* Hide scrollbar for Webkit browsers */
@@ -25,7 +26,7 @@
             -ms-overflow-style: none;
         }
     </style>
-    <body class="bg-slate-200">
+    <body class="bg-gray-100">
         <div id="layout">
             <main class="my-0 mx-auto min-h-full max-w-screen-sm">
                 <div class="my-0 mx-auto min-h-screen max-w-480 overflow-x-hidden bg-white pb-[66px]">
@@ -48,13 +49,13 @@
                             <img class="max-h-[400px] w-full object-cover" src="https://greatmind.id/uploads/article-detail/b986c0e1ea899d19d585004a794c37667056a2b9.jpg" alt="hero cover" height="400" width="480" fetchpriority="high">
                         <div class="absolute bottom-0 left-4 min-h-[122px] w-[calc(100%_-_32px)] translate-y-1/2 rounded-md bg-white p-4 shadow-[0_2px_8px_1px_rgba(152,152,152,0.2)]">
                             <span class="mb-4 block font-semibold xs:text-sm text-balance">Mari bantu sesama kita dengan cara menggalangkan dana.</span>
-                            <a href="" data-testid="homepage-button-galangkan-dana" class="py-1.5 bg-orange-400 focus:bg-blue-30 hover:bg-orange-500 bg-blue-400 text-white font-bold leading-5 rounded flex flex-row items-center justify-center min-w-max px-6 focus:outline-none transition duration-300 ease-in-out w-[176px] rounded-full xs:py-1 xs:text-sm opacity-10 hover:opacity-100">Galang Dana</a>
+                            <a href="/GalangDana" data-testid="homepage-button-galangkan-dana" class="py-1.5 bg-orange-400 focus:bg-blue-30 hover:bg-orange-500 bg-blue-400 text-white font-bold leading-5 rounded flex flex-row items-center justify-center min-w-max px-6 focus:outline-none transition duration-300 ease-in-out w-[176px] rounded-full xs:py-1 xs:text-sm opacity-10 hover:opacity-100">Galang Dana</a>
                         </div>
                     </div>
                     <div class="mb-6 px-4">
                         <h2 class="mb-6 text-base font-semibold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, itaque.</h2>
                         <div class="grid grid-cols-3 gap-y-6">
-                            <a href="{{url('/dana')}}" class="flex flex-col items-center">
+                            <a href="{{url('/CampaignList')}}" class="flex flex-col items-center">
                                 <div class="mb-2 flex h-12 w-12 justify-end">
                                     <img src="https://cdn-icons-png.flaticon.com/128/2618/2618479.png" alt="" width="48" height="48" class="object-contain">
                                 </div>
@@ -94,6 +95,76 @@
 
                         setInterval(nextSlide, 3000); // Change slide every 3 seconds
                     </script>
+                    <!-- Program -->
+                    <div class="py-4">
+                        <h2 class="px-4 text-base font-semibold text-center pb-4">Program</h2>
+                        <div class="flex w-full max-w-2xl bg-gray-300">
+                            <div class="overflow-x-auto scroll-smooth pb-4 py-4 flex space-x-4 px-4 scroll-pl-15">
+                                <!-- Card ke 1 -->    
+                                <div class="flex gap-4 px-4 pb-2">
+                                    <a href="/Program" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
+                                        <img src="https://kitabisa.com/_next/image?url=https%3A%2F%2Fimgix.kitabisa.com%2F31792a2c-65cd-4d29-b0b2-78cdaeb19508.jpg%3Fauto%3Dformat%26fm%3Dpjpg%26ch%3DWidth%2CDPR%2CSave-Data%2CViewport-Width&w=640&q=75" alt="" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
+                                        <div class="p-3">
+                                            <div class="mb-2 flex">
+                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">Senyum</span>
+                                            </div>
+                                            <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">Sedekah Jariyah</span>
+                                            <div class="mb-2">
+                                                <span class="mr-2 inline-block text-xs text-mineshaft">Amal Sholeh</span>
+                                                <span class="text-sm font-semibold">Rp.20.000.000</span>
+                                            </div>
+                                            <svg width="100%" height="5" aria-label="progressBar">
+                                                <rect x="0" rx="3" width="100%" height="100%" fill="#E8E8E8"></rect>
+                                                <rect x="0" rx="3" width="20.226751%" height="100%" fill="#10A8E5" aria-describedby="progress 20.226751%"></rect>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Card ke 2 -->
+                                <div class="flex gap-4 px-4 pb-2">
+                                    <a href="/Program" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
+                                        <img src="https://kitabisa.com/_next/image?url=https%3A%2F%2Fimgix.kitabisa.com%2Fabcde12345.jpg%3Fauto%3Dformat%26fm%3Dpjpg%26ch%3DWidth%2CDPR%2CSave-Data%2CViewport-Width&w=640&q=75" alt="" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
+                                        <div class="p-3">
+                                            <div class="mb-2 flex">
+                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">Bersama</span>
+                                            </div>
+                                            <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">Donasi Pembangunan Masjid</span>
+                                            <div class="mb-2">
+                                                <span class="mr-2 inline-block text-xs text-mineshaft">Donasi Terus Berjalan</span>
+                                                <span class="text-sm font-semibold">Rp.50.000.000</span>
+                                            </div>
+                                            <svg width="100%" height="5" aria-label="progressBar">
+                                                <rect x="0" rx="3" width="100%" height="100%" fill="#E8E8E8"></rect>
+                                                <rect x="0" rx="3" width="50%" height="100%" fill="#10A8E5" aria-describedby="progress 50%"></rect>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Card ke 3 -->
+                                <div class="flex gap-4 px-4 pb-2">
+                                    <a href="/Program" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
+                                        <img src="https://kitabisa.com/_next/image?url=https%3A%2F%2Fimgix.kitabisa.com%2Fabcde67890.jpg%3Fauto%3Dformat%26fm%3Dpjpg%26ch%3DWidth%2CDPR%2CSave-Data%2CViewport-Width&w=640&q=75" alt="" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
+                                        <div class="p-3">
+                                            <div class="mb-2 flex">
+                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">Harapan</span>
+                                            </div>
+                                            <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">Bantu Anak Yatim</span>
+                                            <div class="mb-2">
+                                                <span class="mr-2 inline-block text-xs text-mineshaft">Kebaikan Hati</span>
+                                                <span class="text-sm font-semibold">Rp.30.000.000</span>
+                                            </div>
+                                            <svg width="100%" height="5" aria-label="progressBar">
+                                                <rect x="0" rx="3" width="100%" height="100%" fill="#E8E8E8"></rect>
+                                                <rect x="0" rx="3" width="30%" height="100%" fill="#10A8E5" aria-describedby="progress 30%"></rect>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="py-4">
                         <h2 class="px-4 text-base font-semibold text-center pb-4">Activity</h2>
@@ -329,7 +400,7 @@
                         </div>
                         <span class="inline-block whitespace-nowrap text-black" >Dana</span>
                     </a>
-                    <a href="{{url('/dana')}}" class="inline-block w-1/5 text-[10px]" id="navbar_my-donations" data-testid="homepage-navbar-my-donations">
+                    <a href="{{url('/CampaignList')}}" class="inline-block w-1/5 text-[10px]" id="navbar_my-donations" data-testid="homepage-navbar-my-donations">
                         <div class="relative mb-1 pt-1">
                             <img alt="my-donations" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://cdn.icon-icons.com/icons2/2474/PNG/512/notes_clipboard_icon_149712.png" style="color: transparent;">
                         </div>

@@ -1,24 +1,21 @@
 <?php
 
+use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ArticleController::class, 'home'])->name('home');
 
-Route::get('/dana', function () {
-    return view('layout.dana');
-});
-
 Route::get('/GalangDana', function () {
-    return view('layout.GalangDana');
+    return view('layout.menu.GalangDana');
 });
 
 Route::get('/zakat', function () {
-    return view('layout.zakat');
+    return view('layout.menu.zakat');
 });
 
-Route::get('/account', function () {
-    return view('layout.account');
+Route::get('/login_akun', function () {
+    return view('layout.settings.login_akun');
 });
 
 
@@ -27,22 +24,42 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/CampaignList', function () {
-    return view('layout.CampaignList');
+    return view('layout.list.CampaignList');
 });
 
-Route::get('/akun', function () {
-    return view('layout.akun');
+Route::get('/buat_akun', function () {
+    return view('layout.settings.buat_akun');
 });
 
 Route::get('/payment', function () {
-    return view('layout.payment');
+    return view('layout.payment.payment');
 });
 
 Route::get('/full_news/{id}', [ArticleController::class, 'show'])->name('full_news.show');
 Route::post('/news', [ArticleController::class, 'store'])->name('news.store');
 
 Route::get('/settings', function () {
-    return view('layout.settings');
+    return view('layout.settings.settings');
 });
 
 Route::get('/create_news', [ArticleController::class, 'create'])->name('create_news');
+
+Route::get('/tentang', function(){
+    return view('layout.settings.tentang');
+});
+
+Route::get('/bantuan', function(){
+    return view('layout.settings.bantuan');
+});
+
+Route::get('/akuntabilitas', function(){
+    return view('layout.settings.akuntabilitas');
+});
+
+Route::get('/syarat', function(){
+    return view('layout.settings.syarat');
+});
+
+Route::get('/Program', function(){
+    return view('layout.program.pages_program');
+});

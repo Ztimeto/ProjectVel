@@ -25,7 +25,7 @@ class ArticleController extends Controller
         $article = Article::findOrFail($id);
 
         // Return the full_news view with the article data
-        return view('layout.full_news', compact('article'));
+        return view('layout.news_and_article.full_news', compact('article'));
     }
 
     // Store a new article with image and status
@@ -58,6 +58,6 @@ class ArticleController extends Controller
 
     public function create()
     {
-        return view('layout.create_news');
+        return view('layout.news_and_article.create_news');
     }
 }
