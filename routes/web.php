@@ -60,6 +60,14 @@ Route::get('/syarat', function(){
     return view('layout.settings.syarat');
 });
 
-Route::get('/Program', function(){
-    return view('layout.program.pages_program');
+Route::get('/Program_1', function(){
+    return view('layout.program.program_1');
+});
+
+Route::get('/Program_2', function(){
+    return view('layout.program.program_2');
+});
+
+Route::get('/Program_3', function(){
+    return view('layout.program.program_3');
 });

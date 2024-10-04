@@ -102,7 +102,7 @@
                             <div class="overflow-x-auto scroll-smooth pb-4 py-4 flex space-x-4 px-4 scroll-pl-15">
                                 <!-- Card ke 1 -->    
                                 <div class="flex gap-4 px-4 pb-2">
-                                    <a href="/Program" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
+                                    <a href="/Program_1" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
                                         <img src="https://kitabisa.com/_next/image?url=https%3A%2F%2Fimgix.kitabisa.com%2F31792a2c-65cd-4d29-b0b2-78cdaeb19508.jpg%3Fauto%3Dformat%26fm%3Dpjpg%26ch%3DWidth%2CDPR%2CSave-Data%2CViewport-Width&w=640&q=75" alt="" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
                                         <div class="p-3">
                                             <div class="mb-2 flex">
@@ -122,7 +122,7 @@
                                 </div>
                                 <!-- Card ke 2 -->
                                 <div class="flex gap-4 px-4 pb-2">
-                                    <a href="/Program" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
+                                    <a href="/Program_2" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
                                         <img src="https://kitabisa.com/_next/image?url=https%3A%2F%2Fimgix.kitabisa.com%2Fabcde12345.jpg%3Fauto%3Dformat%26fm%3Dpjpg%26ch%3DWidth%2CDPR%2CSave-Data%2CViewport-Width&w=640&q=75" alt="" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
                                         <div class="p-3">
                                             <div class="mb-2 flex">
@@ -142,7 +142,7 @@
                                 </div>
                                 <!-- Card ke 3 -->
                                 <div class="flex gap-4 px-4 pb-2">
-                                    <a href="/Program" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
+                                    <a href="/Program_3" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
                                         <img src="https://kitabisa.com/_next/image?url=https%3A%2F%2Fimgix.kitabisa.com%2Fabcde67890.jpg%3Fauto%3Dformat%26fm%3Dpjpg%26ch%3DWidth%2CDPR%2CSave-Data%2CViewport-Width&w=640&q=75" alt="" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
                                         <div class="p-3">
                                             <div class="mb-2 flex">
