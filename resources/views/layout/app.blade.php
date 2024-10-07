@@ -95,72 +95,29 @@
 
                         setInterval(nextSlide, 3000); // Change slide every 3 seconds
                     </script>
-                    <!-- Program -->
-                    <div class="py-4">
-                        <h2 class="px-4 text-base font-semibold text-center pb-4">Program</h2>
-                        <div class="flex w-full max-w-2xl bg-gray-300">
-                            <div class="overflow-x-auto scroll-smooth pb-4 py-4 flex space-x-4 px-4 scroll-pl-15">
-                                <!-- Card ke 1 -->    
+                    <div class="flex w-full max-w-2xl bg-gray-300">
+                        <div class="overflow-x-auto scroll-smooth pb-4 py-4 flex space-x-4 px-4 scroll-pl-15">
+                            @foreach($campaigns as $campaign)
                                 <div class="flex gap-4 px-4 pb-2">
-                                    <a href="/Program_1" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
-                                        <img src="https://kitabisa.com/_next/image?url=https%3A%2F%2Fimgix.kitabisa.com%2F31792a2c-65cd-4d29-b0b2-78cdaeb19508.jpg%3Fauto%3Dformat%26fm%3Dpjpg%26ch%3DWidth%2CDPR%2CSave-Data%2CViewport-Width&w=640&q=75" alt="" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
+                                    <a href="{{ route('program_1.show', $campaign->id) }}" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)]">
+                                        <img src="{{ $campaign->image_url }}" alt="{{ $campaign->name }}" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
                                         <div class="p-3">
                                             <div class="mb-2 flex">
-                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">Senyum</span>
+                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">{{ $campaign->name }}</span>
                                             </div>
-                                            <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">Sedekah Jariyah</span>
+                                            <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">{{ $campaign->description }}</span>
                                             <div class="mb-2">
-                                                <span class="mr-2 inline-block text-xs text-mineshaft">Amal Sholeh</span>
-                                                <span class="text-sm font-semibold">Rp.20.000.000</span>
+                                                <span class="mr-2 inline-block text-xs text-mineshaft">Donasi Terkumpul</span>
+                                                <span class="text-sm font-semibold">Rp.{{ number_format($campaign->raised_amount, 2) }}</span>
                                             </div>
                                             <svg width="100%" height="5" aria-label="progressBar">
                                                 <rect x="0" rx="3" width="100%" height="100%" fill="#E8E8E8"></rect>
-                                                <rect x="0" rx="3" width="20.226751%" height="100%" fill="#10A8E5" aria-describedby="progress 20.226751%"></rect>
+                                                <rect x="0" rx="3" width="{{ ($campaign->raised_amount / $campaign->target_amount) * 100 }}%" height="100%" fill="#10A8E5" aria-describedby="progress {{ ($campaign->raised_amount / $campaign->target_amount) * 100 }}%"></rect>
                                             </svg>
                                         </div>
                                     </a>
                                 </div>
-                                <!-- Card ke 2 -->
-                                <div class="flex gap-4 px-4 pb-2">
-                                    <a href="/Program_2" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
-                                        <img src="https://kitabisa.com/_next/image?url=https%3A%2F%2Fimgix.kitabisa.com%2Fabcde12345.jpg%3Fauto%3Dformat%26fm%3Dpjpg%26ch%3DWidth%2CDPR%2CSave-Data%2CViewport-Width&w=640&q=75" alt="" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
-                                        <div class="p-3">
-                                            <div class="mb-2 flex">
-                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">Bersama</span>
-                                            </div>
-                                            <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">Donasi Pembangunan Masjid</span>
-                                            <div class="mb-2">
-                                                <span class="mr-2 inline-block text-xs text-mineshaft">Donasi Terus Berjalan</span>
-                                                <span class="text-sm font-semibold">Rp.50.000.000</span>
-                                            </div>
-                                            <svg width="100%" height="5" aria-label="progressBar">
-                                                <rect x="0" rx="3" width="100%" height="100%" fill="#E8E8E8"></rect>
-                                                <rect x="0" rx="3" width="50%" height="100%" fill="#10A8E5" aria-describedby="progress 50%"></rect>
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Card ke 3 -->
-                                <div class="flex gap-4 px-4 pb-2">
-                                    <a href="/Program_3" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)] ">
-                                        <img src="https://kitabisa.com/_next/image?url=https%3A%2F%2Fimgix.kitabisa.com%2Fabcde67890.jpg%3Fauto%3Dformat%26fm%3Dpjpg%26ch%3DWidth%2CDPR%2CSave-Data%2CViewport-Width&w=640&q=75" alt="" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
-                                        <div class="p-3">
-                                            <div class="mb-2 flex">
-                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">Harapan</span>
-                                            </div>
-                                            <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">Bantu Anak Yatim</span>
-                                            <div class="mb-2">
-                                                <span class="mr-2 inline-block text-xs text-mineshaft">Kebaikan Hati</span>
-                                                <span class="text-sm font-semibold">Rp.30.000.000</span>
-                                            </div>
-                                            <svg width="100%" height="5" aria-label="progressBar">
-                                                <rect x="0" rx="3" width="100%" height="100%" fill="#E8E8E8"></rect>
-                                                <rect x="0" rx="3" width="30%" height="100%" fill="#10A8E5" aria-describedby="progress 30%"></rect>
-                                            </svg>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
 
@@ -324,11 +281,11 @@
                                 @endforelse
                             </div>
                         </div>
-                        <div class="flex my-10 mb-10 justify-center items-center">
+                        <!-- <div class="flex my-10 mb-10 justify-center items-center">
                             <a href="{{ route('create_news') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                 Buat news
                             </a>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Articles Section -->

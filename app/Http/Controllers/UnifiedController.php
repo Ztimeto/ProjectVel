@@ -3,60 +3,65 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Campaign;
+use App\Models\Donation;
 use Illuminate\Http\Request;
 
-class ArticleController extends Controller
+class UnifiedController extends Controller
 {
-    // Display the home page with news and articles
+    // Display the home page with both news, articles, and campaigns
     public function home()
     {
-        // Fetch news and articles separately
+        // Fetch news, articles, and campaigns
         $newsArticles = Article::where('status', 'N')->get(); // Only News
         $articles = Article::where('status', 'A')->get(); // Only Articles
+        $campaigns = Campaign::all(); // All campaigns
 
-        // Pass the data to the view
-        return view('layout.app', compact('newsArticles', 'articles'));
+        // Pass data to the view
+        return view('layout.app', compact('newsArticles', 'articles', 'campaigns'));
     }
 
-    // Display a single article based on its ID
-    public function show($id)
+    // Display a single article
+    public function showArticle($id)
     {
-        // Retrieve the article by ID from the database
         $article = Article::findOrFail($id);
-
-        // Return the full_news view with the article data
         return view('layout.news_and_article.full_news', compact('article'));
     }
 
-    // Store a new article with image and status
-    public function store(Request $request)
+    // Display a single campaign
+    public function showCampaign($id)
+    {
+        $campaign = Campaign::findOrFail($id);
+        return view('layout.program.program_1', compact('campaign'));
+    }
+
+    // Store a new article
+    public function storeArticle(Request $request)
     {
         $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
             'image_url' => 'nullable|image|mimes:jpg,png,jpeg,gif|max:2048',
-            'status' => 'required|in:N,A', // Validate status for News or Article
+            'status' => 'required|in:N,A',
         ]);
 
-        // Handle image upload
         $imagePath = null;
         if ($request->hasFile('image_url')) {
             $image = $request->file('image_url');
-            $imagePath = $image->store('images', 'public'); // Store in storage/app/public/images
+            $imagePath = $image->store('images', 'public');
         }
 
-        // Create the article in the database with status
         Article::create([
             'title' => $request->input('title'),
             'content' => $request->input('content'),
-            'image_url' => $imagePath, // Save the path to the image
-            'status' => $request->input('status'), // Save the status (N for News, A for Article)
+            'image_url' => $imagePath,
+            'status' => $request->input('status'),
         ]);
 
         return redirect()->route('home');
     }
-
-    public function create()
+    
+    public function createArticle()
     {
         return view('layout.news_and_article.create_news');
     }

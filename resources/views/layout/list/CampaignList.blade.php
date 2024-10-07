@@ -28,21 +28,20 @@
             <!-- Campaign Cards -->
             <div id="campaigns" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <!-- Card 1 -->
-                <div id="card-1" class="campaign-card bg-white shadow-md rounded-lg p-4 cursor-pointer">
-                    <div class="flex">
-                        <img src="https://via.placeholder.com/150" alt="Campaign Image" class="w-24 h-24 rounded-lg">
-                        <div class="ml-4 flex-1">
-                            <h2 class="text-lg font-bold">Jemput Berkah! Sedekah Pangan untuk Pejuang Nafkah</h2>
-                            <p class="text-sm text-gray-600">Gerbang Kebaikan Banten</p>
-                            <div class="flex flex-col mt-2">
-                                <p class="text-sm font-semibold" id="terkumpul-1">Terkumpul: Rp0</p>
-                                <p class="text-sm text-gray-500" id="target-1">Target: Rp10.000.000</p>
-                                <p class="text-sm text-gray-500" id="sisa-hari-1">Sisa hari: 45</p>
+                    <div id="card-1" class="campaign-card bg-white shadow-md rounded-lg p-4 cursor-pointer">
+                        <div class="flex">
+                            <img src="https://via.placeholder.com/150" alt="Campaign Image" class="w-24 h-24 rounded-lg">
+                            <div class="ml-4 flex-1">
+                                <h2 class="text-lg font-bold">Jemput Berkah! Sedekah Pangan untuk Pejuang Nafkah</h2>
+                                <p class="text-sm text-gray-600">Gerbang Kebaikan Banten</p>
+                                <div class="flex flex-col mt-2">
+                                    <p class="text-sm font-semibold" id="terkumpul-1">Terkumpul: Rp0</p>
+                                    <p class="text-sm text-gray-500" id="target-1">Target: Rp10.000.000</p>
+                                    <p class="text-sm text-gray-500" id="sisa-hari-1">Sisa hari: 45</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
                 <!-- Card 2 -->
                 <div id="card-2" class="campaign-card bg-white shadow-md rounded-lg p-4 cursor-pointer">
                     <div class="flex">
