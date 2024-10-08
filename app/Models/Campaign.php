@@ -11,23 +11,24 @@ class Campaign extends Model
 
     protected $fillable = [
         'name',
-        'title',
-        'header_image',
         'description',
-        'details',
-        'goal_amount',
-        'message',
+        'image_url',
+        'target_amount',
+        'raised_amount',
+        'is_active',
+        'division', // Include division
     ];
 
-    // Define the relationship with updates
+    // Relationship with updates
     public function updates()
     {
         return $this->hasMany(Update::class);
     }
 
-    // Define the relationship with donations
+    // Relationship with donations
     public function donations()
     {
         return $this->hasMany(Donation::class);
     }
 }
+

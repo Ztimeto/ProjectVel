@@ -30,6 +30,10 @@ Route::view('/syarat', 'layout.settings.syarat');
 Route::get('/create_news', [UnifiedController::class, 'createArticle'])->name('create_news');
 Route::post('/news', [UnifiedController::class, 'storeArticle'])->name('news.store');
 
+// Routes for campaign creation
+Route::get('/create_campaign', [UnifiedController::class, 'createCampaign'])->name('create_campaign');
+Route::post('/campaigns', [UnifiedController::class, 'storeCampaign'])->name('campaigns.store');
+
 // Payment-related routes
 Route::post('/create-donation', [DonationController::class, 'createDonation']);
 

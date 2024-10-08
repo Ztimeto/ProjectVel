@@ -15,9 +15,10 @@ class CreateCampaignsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->string('image_url');
-            $table->int('target_amount');
-            $table->int('raised_amount')->default(0);
+            $table->integer('target_amount'); // Fix here
+            $table->integer('raised_amount')->default(0); // Fix here
             $table->boolean('is_active')->default(true);
+            $table->string('division'); // Add division field
             $table->timestamps();
         });
     }
@@ -27,4 +28,3 @@ class CreateCampaignsTable extends Migration
         Schema::dropIfExists('campaigns');
     }
 }
-

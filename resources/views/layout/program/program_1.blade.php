@@ -10,26 +10,19 @@
     <main class="my-0 mx-auto min-h-full max-w-screen-sm">
         <div class="my-0 mx-auto min-h-screen max-w-480 overflow-x-hidden bg-white pb-[66px]">
             <!-- Header Section -->
-            <section class="bg-cover bg-center text-white" style="background-image: url('{{ $campaign->image_url }}');">
-                <div class="bg-black bg-opacity-60 py-10">
-                    <div class="container mx-auto px-4">
-                        <h1 class="text-3xl font-bold">{{ $campaign->name }}</h1>
-                    </div>
-                </div>
-            </section>
-
+            <img src="{{ asset('storage/' . $campaign->image_url) }}" alt="{{ $campaign->name }}" class="w-full h-64 object-cover" />
             <!-- Campaign Info -->
             <div class="bg-white shadow-lg rounded-lg max-w-4xl mx-auto my-8">
                 <div class="p-4">
                     <div class="flex items-center space-x-4">
                         <div>
-                            <h2 class="text-xl font-bold">budaya</h2>
+                            <span>{{ $campaign->division }}</span>
                         </div>
                     </div>
 
                     <div class="mt-4">
-                        <h3 class="text-2xl font-semibold">Sedekah Jariyah Wujudkan Mimpi Penghafal Quran</h3>
-                        <p class="text-red-600 text-3xl font-bold mt-2">Rp{{ number_format($campaign->raised_amount, 2) }} dari Rp{{ number_format($campaign->target_amount, 2) }}</p>
+                        <h1 class="text-3xl font-bold">{{ $campaign->name }}</h1>
+                        <p class="text-red-600 text-3xl font-bold mt-2">Rp{{ number_format($campaign->raised_amount, 0) }} dari Rp{{ number_format($campaign->target_amount, 0) }}</p>
                         <button class="mt-2 text-sm text-blue-500">Lihat semua</button>
                     </div>
                     <div class="bg-blue-100 text-blue-800 p-2 mt-4 rounded-lg">

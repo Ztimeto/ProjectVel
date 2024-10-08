@@ -100,11 +100,15 @@
                             @foreach($campaigns as $campaign)
                                 <div class="flex gap-4 px-4 pb-2">
                                     <a href="{{ route('program_1.show', $campaign->id) }}" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)]">
-                                        <img src="{{ $campaign->image_url }}" alt="{{ $campaign->name }}" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
+                                    <img src="{{ asset('storage/' . $campaign->image_url) }}"alt="{{ $campaign->name }}" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
                                         <div class="p-3">
+                                            <div class="mb-2 flex">
+                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">{{ $campaign->division }}</span> <!-- Updated -->
+                                            </div>
                                             <div class="mb-2 flex">
                                                 <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">{{ $campaign->name }}</span>
                                             </div>
+                                            
                                             <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">{{ $campaign->description }}</span>
                                             <div class="mb-2">
                                                 <span class="mr-2 inline-block text-xs text-mineshaft">Donasi Terkumpul</span>
@@ -118,9 +122,13 @@
                                     </a>
                                 </div>
                             @endforeach
-                        </div>
+                        </div> 
                     </div>
-
+                    <a href="/create_campaign">
+                        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
+                            buat
+                        </button>
+                    </a>
 
                     <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="py-4">
