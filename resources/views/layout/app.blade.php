@@ -96,34 +96,35 @@
                         setInterval(nextSlide, 3000); // Change slide every 3 seconds
                     </script>
                     <div class="flex w-full max-w-2xl bg-gray-300">
-                        <div class="overflow-x-auto scroll-smooth pb-4 py-4 flex space-x-4 px-4 scroll-pl-15">
-                            @foreach($campaigns as $campaign)
-                                <div class="flex gap-4 px-4 pb-2">
-                                    <a href="{{ route('program_1.show', $campaign->id) }}" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)]">
-                                    <img src="{{ asset('storage/' . $campaign->image_url) }}"alt="{{ $campaign->name }}" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
-                                        <div class="p-3">
-                                            <div class="mb-2 flex">
-                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">{{ $campaign->division }}</span> <!-- Updated -->
-                                            </div>
-                                            <div class="mb-2 flex">
-                                                <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">{{ $campaign->name }}</span>
-                                            </div>
-                                            
-                                            <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">{{ $campaign->description }}</span>
-                                            <div class="mb-2">
-                                                <span class="mr-2 inline-block text-xs text-mineshaft">Donasi Terkumpul</span>
-                                                <span class="text-sm font-semibold">Rp.{{ number_format($campaign->raised_amount, 2) }}</span>
-                                            </div>
-                                            <svg width="100%" height="5" aria-label="progressBar">
-                                                <rect x="0" rx="3" width="100%" height="100%" fill="#E8E8E8"></rect>
-                                                <rect x="0" rx="3" width="{{ ($campaign->raised_amount / $campaign->target_amount) * 100 }}%" height="100%" fill="#10A8E5" aria-describedby="progress {{ ($campaign->raised_amount / $campaign->target_amount) * 100 }}%"></rect>
-                                            </svg>
+                    <div class="overflow-x-auto scroll-smooth pb-4 py-4 flex space-x-4 px-4 scroll-pl-15">
+                        @foreach($campaigns as $campaign)
+                            <div class="flex gap-4 px-4 pb-2">
+                                <a href="{{ route('program_1.show', $campaign->id) }}" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)]">
+                                    <img src="{{ asset('storage/' . $campaign->image_url) }}" alt="{{ $campaign->name }}" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
+                                    <div class="p-3">
+                                        <div class="mb-2 flex">
+                                            <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">{{ $campaign->division }}</span>
                                         </div>
-                                    </a>
-                                </div>
-                            @endforeach
-                        </div> 
-                    </div>
+                                        <div class="mb-2 flex">
+                                            <span class="inline-block overflow-hidden text-ellipsis whitespace-nowrap text-xs text-onyx">{{ $campaign->name }}</span>
+                                        </div>
+                                        
+                                        <span class="mb-2 block h-9 overflow-hidden break-words text-sm font-semibold text-mineshaft line-clamp-2">{{ $campaign->description }}</span>
+                                        <div class="mb-2">
+                                            <span class="mr-2 inline-block text-xs text-mineshaft">Donasi Terkumpul</span>
+                                            <span class="text-sm font-semibold" id="raised_amount_{{ $campaign->id }}">Rp{{ number_format($campaign->raised_amount, 0) }}</span>
+                                        </div>
+                                        <svg width="100%" height="5" aria-label="progressBar">
+                                            <rect x="0" rx="3" width="100%" height="100%" fill="#E8E8E8"></rect>
+                                            <rect id="progress_bar_{{ $campaign->id }}" x="0" rx="3" width="{{ ($campaign->raised_amount / $campaign->target_amount) * 100 }}%" height="100%" fill="#10A8E5" aria-describedby="progress {{ ($campaign->raised_amount / $campaign->target_amount) * 100 }}%"></rect>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div> 
+                </div>
+
                     <a href="/create_campaign">
                         <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
                             buat

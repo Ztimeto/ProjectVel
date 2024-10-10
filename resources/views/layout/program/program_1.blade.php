@@ -92,7 +92,7 @@
                         @foreach($campaign->donations as $donation)
                         <li class="flex justify-between border-b py-2">
                             <span class="text-gray-700">{{ $donation->is_anonymous ? 'Donatur Anonim' : $donation->donor_name }}</span>
-                            <span class="font-bold">Rp{{ number_format($donation->amount, 2) }}</span>
+                            <span class="font-bold">Rp{{ number_format($donation->amount, 0) }}</span>
                         </li>
                         @endforeach
                     </ul>
