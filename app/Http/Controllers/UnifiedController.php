@@ -31,6 +31,7 @@ class UnifiedController extends Controller
     // Display a single campaign
     public function showCampaign($id)
     {
+        $campaign = Campaign::with('updates')->find($id);
         $campaign = Campaign::findOrFail($id);
         return view('layout.program.program_1', compact('campaign'));
     }

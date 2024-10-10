@@ -23,7 +23,6 @@
                     <div class="mt-4">
                         <h1 class="text-3xl font-bold">{{ $campaign->name }}</h1>
                         <p class="text-red-600 text-3xl font-bold mt-2">Rp{{ number_format($campaign->raised_amount, 0) }} dari Rp{{ number_format($campaign->target_amount, 0) }}</p>
-                        <button class="mt-2 text-sm text-blue-500">Lihat semua</button>
                     </div>
                     <div class="bg-blue-100 text-blue-800 p-2 mt-4 rounded-lg">
                         <p>Semakin banyak donasi yang tersedia, semakin besar bantuan yang bisa disalurkan oleh gerakan ini.</p>
@@ -142,7 +141,10 @@
                             onSuccess: function(result) {
                                 alert('Donasi berhasil dilakukan!');
                                 document.getElementById('donationModal').classList.add('hidden');
-                                // Optional: Update your UI or state here
+
+                                // Update the raised amount display
+                                let newRaisedAmount = parseInt(document.getElementById('raised_amount_' + campaignId).innerText.replace(/[^0-9]/g, '')) + parseInt(donationAmount);
+                                document.getElementById('raised_amount_' + campaignId).innerText = 'Rp' + newRaisedAmount.toLocaleString();
                             },
                             onPending: function(result) {
                                 alert('Donasi dalam proses.');

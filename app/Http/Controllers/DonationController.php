@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Midtrans\Snap;
 use App\Models\Donation;
+use App\Models\Campaign; // Make sure to import the Campaign model
 use Illuminate\Support\Facades\Log;
 
 class DonationController extends Controller
@@ -28,6 +29,11 @@ class DonationController extends Controller
 
         // Buat catatan donasi
         $donation = Donation::create($validated);
+
+        // Update the campaign's raised amount
+        $campaign = Campaign::find($validated['campaign_id']);
+        $campaign->raised_amount += $donation->amount;
+        $campaign->save(); // Save the updated campaign
 
         // Buat token Snap
         try {
