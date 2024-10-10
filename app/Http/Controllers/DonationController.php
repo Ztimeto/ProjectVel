@@ -27,6 +27,9 @@ class DonationController extends Controller
 
         $validated['donor_name'] = $validated['name'];
 
+        $campaign = Campaign::find($validated['campaign_id']);
+        $validated['division'] = $campaign->division;
+
         // Buat catatan donasi
         $donation = Donation::create($validated);
 

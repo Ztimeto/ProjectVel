@@ -88,7 +88,7 @@
                 <div class="bg-white shadow-lg rounded-lg p-4">
                     <h4 class="text-lg font-bold">Donasi Terbaru</h4>
                     <ul id="donationsList" class="mt-2 space-y-2">
-                        @foreach($campaign->donations as $donation)
+                        @foreach($campaign->donations->where('division') as $donation)
                         <li class="flex justify-between border-b py-2">
                             <span class="text-gray-700">{{ $donation->is_anonymous ? 'Donatur Anonim' : $donation->donor_name }}</span>
                             <span class="font-bold">Rp{{ number_format($donation->amount, 0) }}</span>

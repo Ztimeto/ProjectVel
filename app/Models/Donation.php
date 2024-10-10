@@ -14,6 +14,7 @@ class Donation extends Model
         'donor_name',
         'amount',
         'is_anonymous',
+        'division',
     ];
 
     // Define the relationship with campaign
