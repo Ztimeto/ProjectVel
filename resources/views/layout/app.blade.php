@@ -7,6 +7,8 @@
         <title>Graha Dhuafa Indonesia</title>
         @vite('resources/css/app.css')
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
     </head>
     <style>
         /* Hide scrollbar for Webkit browsers */
@@ -30,6 +32,10 @@
         <div id="layout">
             <main class="my-0 mx-auto min-h-full max-w-screen-sm">
                 <div class="my-0 mx-auto min-h-screen max-w-480 overflow-x-hidden bg-white pb-[66px]">
+                    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="fixed bottom-16 right-5 bg-green-500 text-white w-16 h-16 rounded-full text-center shadow-lg z-50 hover:bg-green-600 transition">
+                        <i class='bx bxl-whatsapp text-3xl my-4'></i>
+                    </a>
+
                     <div class="relative mb-20 h-[400px] bg-[#fcd0b7]">
                         <div class="absolute left-0 top-0 z-20 h-[60px] w-full transition delay-150 ease-in-out bg-transparent flex items-center">
                             <div class="ml-4">
@@ -95,10 +101,13 @@
 
                         setInterval(nextSlide, 3000); // Change slide every 3 seconds
                     </script>
+                    <div class="flex justify-center items-center mb-6 my-6">
+                        <h1 class="text-xl font-semibold">Program</h1>
+                    </div>
                     <div class="flex w-full max-w-2xl bg-gray-300">
                         <div class="overflow-x-auto scroll-smooth pb-4 py-4 flex space-x-4 px-4 scroll-pl-15">
                             @foreach($campaigns as $campaign)
-                                <div class="flex gap-4 px-4 pb-2">
+                                <div class="flex gap-2 px-1 pb-2">
                                     <a href="{{ route('program_1.show', $campaign->id) }}" class="relative w-[220px] flex-shrink-0 rounded-lg bg-white shadow-[0_2px_8px_rgba(152,152,152,0.2)]">
                                         <img src="{{ asset('storage/' . $campaign->image_url) }}" alt="{{ $campaign->name }}" height="220" width="120" class="h-[120px] w-[220px] rounded-tl-lg rounded-tr-lg">
                                         <div class="p-3">
@@ -125,11 +134,11 @@
                         </div> 
                     </div>
 
-                    <a href="/create_campaign">
+                    <!-- <a href="/create_campaign">
                         <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">
                             buat
                         </button>
-                    </a>
+                    </a> -->
 
                     <hr class="m-0 h-2 w-full border-0 bg-gray-100 p-0">
                     <div class="py-4">
@@ -371,6 +380,12 @@
                             <img alt="my-donations" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://cdn.icon-icons.com/icons2/2474/PNG/512/notes_clipboard_icon_149712.png" style="color: transparent;">
                         </div>
                         <span class="inline-block whitespace-nowrap text-black" >donations</span>
+                    </a>
+                    <a href="{{url('/Contact_us')}}" class="inline-block w-1/5 text-[10px]" id="navbar_my-donations" data-testid="homepage-navbar-my-donations">
+                        <div class="relative mb-1 pt-1">
+                            <img alt="my-donations" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://cdn.icon-icons.com/icons2/1603/PNG/512/mail-box-email-post-delivery-envelope_108534.png" style="color: transparent;">
+                        </div>
+                        <span class="inline-block whitespace-nowrap text-black" >kotak as</span>
                     </a>
                     <a href="{{url('/settings')}}" class="inline-block w-1/5 text-[10px]" id="navbar_account" data-testid="homepage-navbar-account">
                         <div class="relative mb-1 pt-1">

@@ -41,25 +41,34 @@
                     <div class="p-6">
                         <h2 class="text-center text-lg font-bold text-blue-700">Sedekah Jariyah Wujudkan Mimpi Penghafal Quran</h2>
                         <div class="mt-4">
+                            <!-- Nama Donatur -->
                             <label class="block text-gray-700">Nama Donatur</label>
                             <input type="text" id="donorName" placeholder="Nama Donatur" class="w-full mt-2 px-4 py-2 border rounded-lg" />
 
+                            <!-- Email Donatur -->
+                            <label class="block text-gray-700 mt-4">Email Donatur</label>
+                            <input type="email" id="donorEmail" placeholder="Email Donatur" class="w-full mt-2 px-4 py-2 border rounded-lg" />
+
+                            <!-- Nominal Donasi -->
                             <label class="block text-gray-700 mt-4">Nominal Donasi Lainnya</label>
                             <input type="number" id="donationAmount" placeholder="Rp" min="10000" class="w-full mt-2 px-4 py-2 border rounded-lg" />
                             <p class="text-sm text-gray-500 mt-1">Min. donasi sebesar Rp10.000</p>
                             
+                            <!-- Donasi Anonim -->
                             <div class="mt-4">
                                 <input type="checkbox" id="anonymousDonation" class="mr-2">
                                 <label for="anonymousDonation" class="text-sm text-gray-700">Sembunyikan nama saya (Donasi Anonim)</label>
                             </div>
                         </div>
 
+                        <!-- Lanjut Pembayaran Button -->
                         <button id="continueDonationBtn" class="w-full bg-pink-500 text-white font-bold py-2 mt-6 rounded-lg hover:bg-pink-600 transition-colors">
                             Lanjut pembayaran
                         </button>
                     </div>
                 </div>
             </div>
+
 
             <!-- Story Section -->
             <div class="bg-white shadow-lg rounded-lg max-w-4xl mx-auto mb-8 p-4">
@@ -115,6 +124,7 @@
         document.getElementById('continueDonationBtn').onclick = function() {
             const donationAmount = document.getElementById('donationAmount').value;
             const donorName = document.getElementById('donorName').value;
+            const donorEmail = document.getElementById('donorEmail').value;
             const anonymousDonation = document.getElementById('anonymousDonation').checked;
             const campaignId = this.getAttribute('data-campaign-id');
             const displayName = anonymousDonation ? "Sahabat Baik" : donorName;
@@ -130,6 +140,7 @@
                     body: JSON.stringify({
                         amount: donationAmount,
                         name: displayName,
+                        email: donorEmail,
                         campaign_id: campaignId
                     })
                 })

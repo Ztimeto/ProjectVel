@@ -22,6 +22,7 @@ class DonationController extends Controller
         $validated = $request->validate([
             'amount' => 'required|numeric|min:10000',
             'name' => 'required|string',
+            'email' => 'required|email',
             'campaign_id' => 'required|exists:campaigns,id',
         ]);
 

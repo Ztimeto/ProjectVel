@@ -20,6 +20,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'google_id',
+        'user_id',
     ];
 
     /**
@@ -44,4 +46,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+     // Define the inverse relationship
+     public function articles()
+     {
+         return $this->hasMany(Article::class); // A user can have many articles
+     }
 }
