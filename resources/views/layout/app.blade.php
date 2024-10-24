@@ -32,7 +32,7 @@
         <div id="layout">
             <main class="my-0 mx-auto min-h-full max-w-screen-sm">
                 <div class="my-0 mx-auto min-h-screen max-w-480 overflow-x-hidden bg-white pb-[66px]">
-                    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="fixed bottom-16 right-5 bg-green-500 text-white w-16 h-16 rounded-full text-center shadow-lg z-50 hover:bg-green-600 transition">
+                    <a href="https://api.whatsapp.com/send?phone=6289605293982" class="fixed bottom-20 right-5 bg-green-500 text-white w-16 h-16 rounded-full text-center shadow-lg z-50 hover:bg-green-600 transition">
                         <i class='bx bxl-whatsapp text-3xl my-4'></i>
                     </a>
 
@@ -373,7 +373,7 @@
                         <div class="relative mb-1 pt-1">
                             <img alt="galang-dana" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://www.pngkit.com/png/full/117-1179085_open-logo-donasi.png" style="color: transparent;">
                         </div>
-                        <span class="inline-block whitespace-nowrap text-black" >Dana</span>
+                        <span class="inline-block whitespace-nowrap text-black" >GalangDana</span>
                     </a>
                     <a href="{{url('/CampaignList')}}" class="inline-block w-1/5 text-[10px]" id="navbar_my-donations" data-testid="homepage-navbar-my-donations">
                         <div class="relative mb-1 pt-1">
@@ -385,7 +385,7 @@
                         <div class="relative mb-1 pt-1">
                             <img alt="my-donations" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://cdn.icon-icons.com/icons2/1603/PNG/512/mail-box-email-post-delivery-envelope_108534.png" style="color: transparent;">
                         </div>
-                        <span class="inline-block whitespace-nowrap text-black" >kotak as</span>
+                        <span class="inline-block whitespace-nowrap text-black" >Contact Us</span>
                     </a>
                     <a href="{{url('/settings')}}" class="inline-block w-1/5 text-[10px]" id="navbar_account" data-testid="homepage-navbar-account">
                         <div class="relative mb-1 pt-1">

@@ -30,6 +30,6 @@ class ContactUsController extends Controller
             'message' => $request->message,
         ]);
 
-        return redirect()->back()->with('success', 'Pesan Anda telah dikirim!');
+        return redirect()->back()->with('success', 'Terimakasih telah mengirim pesan!');
     }
 }
