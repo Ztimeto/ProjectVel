@@ -236,6 +236,39 @@
                 <button id="close-warning" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Tutup</button>
             </div>
         </div>
+
+        <div class="font-base fixed bottom-0 z-[2] m-0 flex w-full max-w-[640px] list-none border-t border-[#dedede] bg-orange-100 p-2.5 text-center align-middle font-semibold leading-[13px] no-underline justify-center">
+            <a href="{{url('/')}}" class="inline-block w-1/5 text-[10px]" id="navbar_home" data-testid="homepage-navbar-home">
+                <div class="relative mb-1 pt-1">
+                        <img alt="home" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://static.vecteezy.com/system/resources/previews/009/589/471/non_2x/home-icon-transparent-free-png.png" style="color: transparent;">
+                </div>
+                    <span class="inline-block whitespace-nowrap text-black " >home</span>
+            </a>
+            <a href="{{url('/GalangDana')}}" class="inline-block w-1/5 text-[10px]" id="navbar_galang-dana" data-testid="homepage-navbar-galang-dana">
+                <div class="relative mb-1 pt-1">
+                    <img alt="galang-dana" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://www.pngkit.com/png/full/117-1179085_open-logo-donasi.png" style="color: transparent;">
+                </div>
+                    <span class="inline-block whitespace-nowrap text-black" >GalangDana</span>
+            </a>
+            <a href="{{url('/CampaignList')}}" class="inline-block w-1/5 text-[10px]" id="navbar_my-donations" data-testid="homepage-navbar-my-donations">
+                <div class="relative mb-1 pt-1">
+                    <img alt="my-donations" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://cdn.icon-icons.com/icons2/2474/PNG/512/notes_clipboard_icon_149712.png" style="color: transparent;">
+                </div>
+                    <span class="inline-block whitespace-nowrap text-black" >donations</span>
+            </a>
+            <a href="{{url('/Contact_us')}}" class="inline-block w-1/5 text-[10px]" id="navbar_my-donations" data-testid="homepage-navbar-my-donations">
+                <div class="relative mb-1 pt-1">
+                    <img alt="my-donations" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://cdn.icon-icons.com/icons2/1603/PNG/512/mail-box-email-post-delivery-envelope_108534.png" style="color: transparent;">
+                </div>
+                    <span class="inline-block whitespace-nowrap text-black" >Contact Us</span>
+            </a>
+            <a href="{{url('/settings')}}" class="inline-block w-1/5 text-[10px]" id="navbar_account" data-testid="homepage-navbar-account">
+                <div class="relative mb-1 pt-1">
+                    <img alt="account" loading="lazy" width="0" height="0" decoding="async" data-nimg="1" class="inline-block h-[24px] w-[24px]" src="https://cdn.icon-icons.com/icons2/3553/PNG/512/account_profile_user_ecommerce_icon_224942.png" style="color: transparent;">
+                </div>
+                    <span class="inline-block whitespace-nowrap text-black" >account</span>
+            </a>
+        </div>
     </main>
 
     <script>
